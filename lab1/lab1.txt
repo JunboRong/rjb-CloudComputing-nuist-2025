@@ -1,0 +1,50 @@
+Lab 1: Virtualization and Cloud Basics
+1. Check if your processor supports Intel/AMD virtualization technology. Enable Intel virtualization technology in BIOS if possible.
+I checked my processor using Task Manager (Performance → CPU).
+It shows that virtualization is supported. I also enabled Intel Virtualization Technology in the BIOS settings.
+
+2. What are the fundamental reasons behind the success of cloud computing? Name three pros and three cons.
+Reasons for success:
+Easy access to resources through the internet
+No need to buy expensive hardware
+
+Flexible and scalable services
+Pros:
+Cost saving
+High scalability
+Easy access from anywhere
+Cons:
+Security and privacy concerns
+Internet dependency
+Limited control over infrastructure
+
+3. What is the primary function of a hypervisor in virtualization?
+The main function of a hypervisor is to create and manage virtual machines and allow multiple operating systems to run on one physical machine.
+
+4. What is a virtual machine (VM)?
+A virtual machine is a software-based computer that runs an operating system and applications like a real computer.
+
+5. What are the benefits of using virtual machines?
+Better resource utilization
+Isolation between systems
+Easy backup and recovery
+Run multiple OS on one machine
+
+6. List five use cases of virtual machines.
+Software testing
+Running multiple operating systems
+Server virtualization
+Cloud computing
+Learning and training environments
+
+7. In virtualization, what is the guest operating system?
+b) The operating system installed on a virtual machine
+
+8. What does virtual machine isolation mean?
+c) Virtual machines run independently and are isolated from each other and the host system.
+
+9. What is the benefit of virtual machine portability?
+c) It allows virtual machines to be moved between different physical machines with compatible hypervisors.
+
+10. What is the purpose of cloning a virtual machine?
+The purpose of cloning a virtual machine is to create an exact copy of an existing VM for backup, testing, or deployment purposes.
