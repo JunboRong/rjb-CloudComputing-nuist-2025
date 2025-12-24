@@ -1,0 +1,29 @@
+1.
+Orchestration tools such as Kubernetes help manage and scale application servers by automating deployment, load balancing, failure recovery, and resource allocation. They allow applications to run reliably across multiple servers while automatically scaling instances based on demand.
+
+2.
+A Pod is the smallest deployable unit in Kubernetes and contains one or more containers; a Deployment manages Pods and ensures the desired number of replicas and supports rolling updates; a Service provides a stable network endpoint to access Pods.
+
+3.
+A Namespace is a logical isolation mechanism in Kubernetes used to organize and manage resources within a cluster, for example, the default namespace.
+
+4.
+The Kubelet is an agent running on each node that ensures containers are running as specified by the control plane, and cluster nodes can be checked using the command kubectl get nodes.
+
+5.
+ClusterIP exposes a service only within the cluster, NodePort exposes it through a static port on each node, and LoadBalancer exposes the service externally using a cloud provider’s load balancer.
+
+6.
+A Deployment can be scaled to five replicas using the command kubectl scale deployment <deployment-name> --replicas=5.
+
+7.
+A Deployment image can be updated without downtime by using Kubernetes rolling updates, for example with the kubectl set image command.
+
+8.
+A Deployment can be exposed to external traffic by creating a Service of type NodePort or LoadBalancer, or by using an Ingress resource.
+
+9.
+Kubernetes scheduling decides where a Pod runs based on available resources, node constraints, affinity rules, and overall load distribution.
+
+10.
+Ingress manages external HTTP/HTTPS access with advanced routing features, while a Service provides basic network access and load balancing for Pods.

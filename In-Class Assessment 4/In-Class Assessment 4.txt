@@ -1,0 +1,29 @@
+1.
+Serverless computing aims to eliminate the operational overhead of managing infrastructure and scaling services manually, which is common in traditional Kubernetes-based microservice deployments. Serverless is clearly better for event-driven or bursty workloads such as image processing on demand, where instances scale to zero when idle, but it may not be suitable for long-running, latency-sensitive services due to cold start delays.
+
+2.
+A service mesh like Istio provides advanced traffic management, security, and observability features that go beyond basic Kubernetes networking, such as fine-grained routing, mutual TLS, retries, and distributed tracing, without requiring changes to application code.
+
+3.
+A sidecar proxy such as Envoy runs alongside each service instance and intercepts all inbound and outbound traffic, enabling traffic control, security, and observability at the network layer. It is needed in a service mesh to enforce policies and manage communication consistently without modifying application logic.
+
+4.
+Istio provides traffic management features such as weighted routing, retries, timeouts, circuit breaking, and fault injection. For example, weighted routing enables gradual rollouts of new versions, while retries and timeouts improve reliability by handling transient failures automatically.
+
+5.
+Knative Serving enables autoscaling by monitoring incoming request traffic and automatically adjusting the number of Pods accordingly. Scaling up is triggered by increased request volume or concurrency, while scaling down (even to zero) occurs when there is no traffic.
+
+6.
+Knative Eventing provides a framework for building event-driven architectures by decoupling event producers and consumers. It supports standardized event formats, brokers, and triggers, allowing services to react to events asynchronously without tight coupling.
+
+7.
+Knative leverages Kubernetes primitives such as Deployments, Services, and the Horizontal Pod Autoscaler but abstracts them behind higher-level concepts like Services and Revisions. This abstraction simplifies deployment, scaling, and networking for developers, allowing them to focus on application code rather than infrastructure details.
+
+8.
+In KServe, an InferenceService defines how a machine learning model is deployed, scaled, and exposed as an API. It simplifies ML deployment by handling model serving, autoscaling, versioning, and networking automatically.
+
+9.
+In a production KServe workflow, an HTTP request enters through Istio or Knative networking, is routed to the appropriate InferenceService, and then forwarded to the model container running in a Kubernetes Pod to generate a prediction. Kubernetes manages the underlying Pods and resources, Knative handles scaling, Istio manages traffic routing, and latency bottlenecks may occur at cold starts, network hops, or model inference time.
+
+10.
+Istio’s traffic routing features enable canary deployments and A/B testing by splitting traffic between different service versions using weighted routing, retries, and circuit breaking. Compared to manual rollouts, this approach allows safer, more controlled experimentation, though it introduces additional complexity and operational overhead from managing service mesh configurations.
